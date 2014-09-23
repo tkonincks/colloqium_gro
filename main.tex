@@ -199,20 +199,29 @@ In the random barrier model, the hopping rate is not site-dependent but barrier-
 
 The two models use the same set of rates $W_n$, then the fluctuation of the barrier model $j_n^B=W_n\left(p_N^B-P_{N+1}^B\right)$ and the rescaled probability density of the trap model $W_n p_N^T$ obey the same differential rules. It follows that when using the operator notation of $W_n$, the spectrum of eigenvalues of both models will be the same. This is called the trap-barrier duality. A simple way to understand it is to identify the regions between large barriers in the so-called model model with the deep traps in the trap model. This vision is not perfectly exact but has the advantage of clearly showing the kind of duality that links these two models. One can refer to the publication of Jack and Sollich about the barrier-trap duality \cite{Jack2007} for the exact derivation.\jline
 
-These models remain at the theoretic level and no prediction has yet been made.
+RESULTS!!!!!!!!!!!!!!!!!!!!
 
 \subsection{Monte-Carlo method}
 \label{monte-carlo}
 
-The Monte-Carlo method is a stochastic method used to compute quantities that depend for a large part on random phenomena, at least from the point of view of the order of magnitude they are studied from. This method is often used for dynamics of fluids or statistical thermodynamics because it allows to compute efficiently many quantities that characterizes those types of systems. In the case of the two experimental studies (from Hanes \etal \cite{Hanes2012} and Evers \etal \cite{Evers2013}) on the dynamics of fluids in disordered environments, systematic comparison with Monte-Carlo simulations has been made.\jline
+The Monte-Carlo method is a stochastic method that focuses on computing physical quantities by making a large number of calculations using random numbers, eventually averaging the results. This method is particularly suited in the kind of systems that were studied experimentally by Hanes \etal and Evers \etal (resumed in sec. \ref{exp}, which precisely made MC calculations to complete their work.\jline
 
 The particle evolves in a computer-generated random potential. The simulations were made either by putting the particles randomly distributed in the potential energy surface (instantaneous quench of the system), or letting the particles relax and reach an equilibrium position (potential occupied following Boltzmann statistics). At each iteration a particle is randomly chosen, along with a direction. Then, the corresponding energy for a step in that direction is calculated from the particle's current position on the energy landscape. The move is accepted if the energy needed to make that step is low enough. It can also be put into a probability that depends on the energy of the step.\jline
+
+\begin{figure}[htbp]
+\centering
+\subfigure
+{\includegraphics[width=14cm]{pics/msd_ndc_mc.png}}
+\caption{}
+\label{msd ndc mc}
+\end{figure}
+
 
 \subsection{Molecular Dynamics}
 
 Molecular dynamics is one of the most used methods when making calculations about large systems of molecules or macromolecules. It is often used in drug design when it comes to model large proteins (often in addition with quantum mechanical methods, the so-called QM/MM). Molecular mechanics (MM), as expected, models the behaviour of molecular systems using the classical equations of motion (instead of quantum mechanical equations). This makes MM a very fast method by which thousands of atoms can be treated. It is also very adapted for thermodynamical and statistical systems, like for example liquids in confined matrices.\jline
 
-A study from Chang \etal \cite{Chang2004} published in The American Physical Society presents a MM calculation of a binary mixture of hard spheres. One component is mobile and will undergo the dynamics, while the other component is fixed in space and time (similar to the QA mixture in sec. \ref{mct}). The algorithm calculates the velocity of each particle, and the new velocity after each collision.. Fig.\ref{msd mm} shows the mean square displacement in function of time, and the normalized diffusion coefficient in function of the matrix/fluid ratio, as calculated with the MM algorithms.\jline
+A study from Chang \etal \cite{Chang2004} published in The American Physical Society presents a MM calculation of a binary mixture of hard spheres. One component is mobile and will undergo the dynamics, while the other component is fixed in space and time (similar to the QA mixture in sec. \ref{mct}). The algorithm calculates the velocity of each particle, and the new velocity after each collision.. Fig.\ref{msd ndc mm} shows the mean square displacement in function of time, and the normalized diffusion coefficient in function of the matrix/fluid ratio, as calculated with the MM algorithms.\jline
 
 But before any analysis we have to define some quantities that are used in this publication. Since the matrix and the fluid are made of hard sphere particles, we can define $\sigma_mm$ as the matrix particle diameter, $\sigma_ff$ as the fluid particle diameter and $\sigma_{fm} = \sigma_{mf}$ as the typical paticle-matrix distance. The matrix and fluid volume fractions are defined as:
 
@@ -227,12 +236,15 @@ But before any analysis we have to define some quantities that are used in this 
 \subfigure
 {\includegraphics[width=7cm]{pics/ndc_mm.png}}
 \caption{(left) Mean square displacement in function of time, the different curves show different matrix volume fractions $\phi_m$. (right) Normalized diffusion coefficient in function of the fluid volume fractions, the different curves show different $\nicefrac{\phi_f}{\phi_m}$ ratios.}
-\label{msd mm}
+\label{msd ndc mm}
 \end{figure}
 
 As stated in sec. \ref{exp}, a system with a mean square displacement that follows a line with a slope equal to one has a diffusive behaviour. If the slope is lower than one, the system has a subdiffusive behaviour, and that is what happens when $\phi_m$ has a value around 0.25.\\
 
-Looking at the picture of the diffusion coefficient (right), something apparently strange happens: the curve has a qualitatively different behaviour when the ratio $\nicefrac{\phi_ff}{\phi_mm}$ changes. When $\sigma_{ff}$ is greater than $\sigma_{mm}$, the diffusion increases as the size of the fluid particle increases. However when $\nicefrac{\sigma_{ff}}{\sigma_{mm}}$, the diffusion decreases when $\sigma_{ff}$ increases.
+Fig. \ref{msd ndc mm} shows the normalized diffusion coefficient $D(t)/D_0$ as a function of $\phi_f$ for different values of $\sigma_{ff}$ for a fixed value of $\sigma_{mm}=1.0$. Therefore $\phi_m$ decreases as $\phi_f$ increases.\\
+Something apparently strange happens: the curve has a qualitatively different behaviour when the ratio $\nicefrac{\phi_ff}{\phi_mm}$ changes. When $\sigma_{ff}$ is greater than $\sigma_{mm}$, the diffusion decreases as the size of the fluid particle increases. But when $\nicefrac{\sigma_{ff}}{\sigma_{mm}}<1.0$, the diffusion decreases when $\sigma_{ff}$ increases.\\
+This can be understood as: when $\sigma_{ff}$ is greater that $\sigma_{mm}$, replacing a large fluid particle by several smaller immobile particles will create what is called a free volume. Free volume appears when matrix particles are so close to each other that some of the space is not available for fluid to flow in. This is why the diffusion decreases. \\
+On the other hand, when $\sigma_{ff}$ is smaller than $\sigma_{mm}$, replacing several small fluid particles with a large matrix immobile one will tend to reduce the free space, and increasing the diffusion.
 
 \subsection{Mode-Coupling theory}
 \label{mct}
