@@ -396,21 +396,41 @@ the function containing the correlation function between the physical quantity w
 
 The MCT has helped to make quality predictions of the liquid-glass transition on many bulk liquids, thus the idea emerged that MCT could
 be applied to systems presenting certain constraints. Thus, an extension for fluids confined in rough potentials has been developed by
-V. Krakoviack \cite{Krakoviack2005,Krakoviack2005a,Krakoviack2007,Krakoviack2009}. The theory remains essentially the same, except few subtilities like the fact that there is no more translational
-invariance, or the averages that have to be taken not only on the ensembles but also on the random matrix.\jline
-
-The mode coupling theory describes the collective dynamics of liquids, instead of the dynamics of each single particle, as does the random
-walk for example. To simulate the presence of the disordered environment, the system is modeled by a binary mixture (called quenched-annealed
-mixture, QA mixture) in which one of the species would be immobilized (the quenched component), and the other component, the annealed 
-component would follow the MCT dynamics (see fig. \ref{qa mixture}).
+V. Krakoviack \cite{Krakoviack2005,Krakoviack2005a,Krakoviack2007,Krakoviack2009}. The theory acounts for the presence of the disordered 
+modeling the system by a binary mixture (called quenched-annealed mixture, QA mixture) in which one of the species would be immobilized 
+(the quenched component), and the other component (the annealed component) would follow the MCT dynamics (see fig. \ref{qa mixture}).
 
 \begin{figure}[htbp]
 \centering
 \subfigure
 {\includegraphics[width=7cm]{pics/qa_mixtures.png}}
-\caption{}
+\caption{Sketch of a QA system. In black, the immobile matrix particles. In white and gray, with arrows symbolizing their movement, the 
+fluid particles and the tagged particle, respectively.\\V. Krakoviack, Phys. Rev. E \textbf{79}, 061501 (2009)}
 \label{qa mixture}
 \end{figure}
+
+Mainly, MCT has helped to understand liquid-glass transitions with great accuracy. The extension of the MCT to fluids confined in 
+disordered allows to investigate the glass formation in disordered environment. Fig. \ref{lg trans mct} shows a phase diagram
+of a QA mixture. The x and the y-axis show the fluid and the matrix volume fractions respectively. Two models have been studied:
+in the model I the quenched components are correlated and no overlap is allowed between them, while in model II overlap is 
+allowed.
+
+\begin{figure}[htbp]
+\centering
+\subfigure
+{\includegraphics[width=7cm]{pics/lg-trans_mct.png}}
+\caption{blabla\\V. Krakoviack, Phys. Rev. E \textbf{79}, 061501 (2009)}
+\label{qa mixture}
+\end{figure}
+
+First of all it is necessary to discuss the qualitative difference of curvatire fo the two models: since in model I the overlap is 
+not allowed, the strengh of confinment increases more quickly with $\phi_m$ than in model II, leading to a smaller curvature, and 
+a transition occuring at lower $\phi_m$.\jline
+
+For both models, the phase diagram shows two qualitatively different transitions: the A-type transition is a continuous transition 
+from liquid to fluid while the B-type transition is discontinuous. Both transition types join at a singularity, noted E. In model
+II the transition B does not stop where the transition A starts, but ends at a point called C. A system passing the line before C
+will undergo a glass-glass transition.
 
 \newpage
 \bibliographystyle{plain}
