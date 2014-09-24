@@ -67,10 +67,32 @@ Robert~L Jack and Peter Sollich.
 \newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
   2009(11):P11011, November 2009.
 
-\bibitem{Lang2012}
-Simon Lang, Rolf Schilling, Vincent Krakoviack, and Thomas Franosch.
-\newblock {Mode-coupling theory of the glass transition for confined fluids}.
-\newblock {\em Physical Review E}, page~16, August 2012.
+\bibitem{Krakoviack2005}
+V.~Krakoviack.
+\newblock {Liquid-glass transition of a fluid confined in a disordered porous
+  matrix: A mode-coupling theory}.
+\newblock {\em Physical Review Letters}, 94(6):5, September 2005.
+
+\bibitem{Krakoviack2005a}
+V.~Krakoviack.
+\newblock {Liquid-glass transition of confined fluids: Some insights from a
+  mode-coupling theory}.
+\newblock page~7, June 2005.
+
+\bibitem{Krakoviack2007}
+V.~Krakoviack.
+\newblock {Mode-coupling theory for the slow collective dynamics of fluids
+  adsorbed in disordered porous media}.
+\newblock {\em Physical Review E - Statistical, Nonlinear, and Soft Matter
+  Physics}, 75(3):19, October 2007.
+
+\bibitem{Krakoviack2009}
+V.~Krakoviack.
+\newblock {Tagged-particle dynamics in a fluid adsorbed in a disordered porous
+  solid: Interplay between the diffusion-localization and liquid-glass
+  transitions}.
+\newblock {\em Physical Review E - Statistical, Nonlinear, and Soft Matter
+  Physics}, 79(6):18, January 2009.
 
 \bibitem{Nasta2009}
 Paolo Nasta, Tamir Kamai, Giovanni~B. Chirico, Jan~W. Hopmans, and Nunzio

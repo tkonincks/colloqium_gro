@@ -396,16 +396,19 @@ the function containing the correlation function between the physical quantity w
 
 The MCT has helped to make quality predictions of the liquid-glass transition on many bulk liquids, thus the idea emerged that MCT could
 be applied to systems presenting certain constraints. Thus, an extension for fluids confined in rough potentials has been developed by
-V. Krakoviack \cite{Krakoviack2005,Krakoviack2005a,Krakoviack2007,Krakoviack2009}. The theory acounts for the presence of the disordered 
-modeling the system by a binary mixture (called quenched-annealed mixture, QA mixture) in which one of the species would be immobilized 
-(the quenched component), and the other component (the annealed component) would follow the MCT dynamics (see fig. \ref{qa mixture}).
+V. Krakoviack \cite{Krakoviack2005,Krakoviack2005a,Krakoviack2007,Krakoviack2009}. The theory remains essentially the same, except few subtilities like the fact that there is no more translational
+invariance, or the averages that have to be taken not only on the ensembles but also on the random matrix.\jline
+
+The mode coupling theory describes the collective dynamics of liquids, instead of the dynamics of each single particle, as does the random
+walk for example. To simulate the presence of the disordered environment, the system is modeled by a binary mixture (called quenched-annealed
+mixture, QA mixture) in which one of the species would be immobilized (the quenched component), and the other component, the annealed 
+component would follow the MCT dynamics (see fig. \ref{qa mixture}).
 
 \begin{figure}[htbp]
 \centering
 \subfigure
 {\includegraphics[width=7cm]{pics/qa_mixtures.png}}
-\caption{Sketch of a QA system. In black, the immobile matrix particles. In white and gray, with arrows symbolizing their movement, the 
-fluid particles and the tagged particle, respectively.\\V. Krakoviack, Phys. Rev. E \textbf{79}, 061501 (2009)}
+\caption{}
 \label{qa mixture}
 \end{figure}
 
